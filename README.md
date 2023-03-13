@@ -3,7 +3,7 @@ A fork of Greyhound modified by me, the Call of Duty Asset Extractor.
 ## Thanks to the original author: [Scobalula](https://github.com/Scobalula) & [dtzxporter](https://github.com/dtzxporter)  
 
 # What's new
-* A switch to change the unit of exported models and animations.  
+* A switch to change the unit of exported models and animations.(friendly to the source engine.)  
 ![image](https://user-images.githubusercontent.com/60915288/224821799-70fe9e83-396c-4098-949f-e840553dd816.png)  
 
 * Disable windows maximum path length limitation, free to export assets.  
