@@ -204,7 +204,8 @@ int APIENTRY WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,
             { "exportgdt_waw", "false" },
             { "cleargdt_exit", "true" },
             { "overwrite_gdt", "true" },
-            { "cdn_downloader", "false" }
+            { "cdn_downloader", "false" },
+            { "unit", "Centimeter" }
         });
 
 #ifndef _DEBUG

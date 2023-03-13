@@ -31,6 +31,7 @@ private:
     void OnXSounds();
     void OnXMTL();
     void OnAssetSortMethod();
+    void OnUnit();
 
 
 protected:

@@ -18,6 +18,7 @@ BEGIN_MESSAGE_MAP(GeneralSettings, WraithWindow)
     ON_COMMAND(IDC_SHOWXSOUNDS, OnXSounds)
     ON_COMMAND(IDC_SHOWXMTL, OnXMTL)
     ON_CBN_SELENDOK(IDC_ASSET_SORT_METHOD, OnAssetSortMethod)
+    ON_CBN_SELENDOK(IDC_UNIT, OnUnit)
 END_MESSAGE_MAP()
 
 void GeneralSettings::OnBeforeLoad()
@@ -66,6 +67,18 @@ void GeneralSettings::OnBeforeLoad()
     if (ImageFormat == "Name") { ComboControl->SetCurSel(0); }
     if (ImageFormat == "Details") { ComboControl->SetCurSel(1); }
     if (ImageFormat == "None") { ComboControl->SetCurSel(2); }
+
+    // Add unit types
+    auto ComboControlUnit = (CComboBox*)GetDlgItem(IDC_UNIT);
+    // Add
+    ComboControlUnit->InsertString(0, L"Centimeter");
+    ComboControlUnit->InsertString(1, L"Inch");
+
+    // Unit settings
+    auto Unit = SettingsManager::GetSetting("unit", "Centimeter");
+    // Apply
+    if (Unit == "Centimeter") { ComboControlUnit->SetCurSel(0); }
+    if (Unit == "Inch") { ComboControlUnit->SetCurSel(1); }
 }
 
 void GeneralSettings::OnXModels()
@@ -127,5 +140,18 @@ void GeneralSettings::OnAssetSortMethod()
     case 1: SettingsManager::SetSetting("assetsortmethod", "Details"); break;
     case 2: SettingsManager::SetSetting("assetsortmethod", "None"); break;
     default: SettingsManager::SetSetting("exportimg", "Name"); break;
+    }
+}
+
+void GeneralSettings::OnUnit()
+{
+    // Grab the unit type
+    auto SelectedUnit = ((CComboBox*)GetDlgItem(IDC_UNIT))->GetCurSel();
+    // Check and set
+    switch (SelectedUnit)
+    {
+    case 0: SettingsManager::SetSetting("unit", "Centimeter"); break;
+    case 1: SettingsManager::SetSetting("unit", "Inch"); break;
+    default: SettingsManager::SetSetting("unit", "Centimeter"); break;
     }
 }

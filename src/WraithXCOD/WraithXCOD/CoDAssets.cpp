@@ -1377,6 +1377,19 @@ ExportGameResult CoDAssets::ExportAnimationAsset(const CoDAnim_t* Animation, con
         if (Result != nullptr)
         {
             // Prepare to export to the formats specified in settings
+            auto unitSetting = SettingsManager::GetSetting("unit");
+            if (unitSetting == "Centimeter")
+            {
+                Result->ScaleAnimation(2.54f);
+            }
+            else if (unitSetting == "Inch")
+            {
+                //Result->ScaleAnimation(1.f);
+            }
+            else
+            {
+                Result->ScaleAnimation(2.54f);
+            }
 
             // Check for DirectXAnim format
             if (SettingsManager::GetSetting("export_directxanim") == "true")
@@ -1388,7 +1401,7 @@ ExportGameResult CoDAssets::ExportAnimationAsset(const CoDAnim_t* Animation, con
             }
 
             // The following formats are scaled
-            Result->ScaleAnimation(2.54f);
+            //Result->ScaleAnimation(2.54f);
 
             // Check for SEAnim format
             if (SettingsManager::GetSetting("export_seanim") == "true")
@@ -2019,6 +2032,19 @@ void CoDAssets::ExportWraithModel(const std::unique_ptr<WraithModel>& Model, con
     }
 
     // Prepare to export to the formats specified in settings
+    auto unitSetting = SettingsManager::GetSetting("unit");
+    if (unitSetting == "Centimeter")
+    {
+        Model->ScaleModel(2.54f);
+    }
+    else if (unitSetting == "Inch")
+    {
+        //Model->ScaleModel(1.f);
+    }
+    else
+    {
+        Model->ScaleModel(2.54f);
+    }
 
     // Check for XME format
     if (SettingsManager::GetSetting("export_xmexport") == "true")
@@ -2040,7 +2066,7 @@ void CoDAssets::ExportWraithModel(const std::unique_ptr<WraithModel>& Model, con
     }
 
     // The following formats are scaled
-    Model->ScaleModel(2.54f);
+    //Model->ScaleModel(2.54f);
 
     // Check for Obj format
     if (SettingsManager::GetSetting("export_obj") == "true")
