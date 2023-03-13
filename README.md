@@ -6,7 +6,7 @@ A fork of Greyhound modified by me, the Call of Duty Asset Extractor.
 ![image](https://user-images.githubusercontent.com/60915288/224821799-70fe9e83-396c-4098-949f-e840553dd816.png)  
 
 * Disable windows maximum path length limitation, free to export assets.  
-(Best to use on windows10 and windows11. The file path display may be folded, but it does not affect the use.)  
+(Best to use on windows10 or windows11. The file path display may be folded, but it does not affect the use.)  
 ![image](https://user-images.githubusercontent.com/60915288/224823156-21136d9e-52e4-4ed1-8c26-ddd543801484.png)  
 
 * Modify the hash table reading method of MW2022 to adapt to MW2022 hash table.  
