@@ -1,6 +1,6 @@
 # Greyhoundx
 A fork of Greyhound modified by me, the Call of Duty Asset Extractor.  
-## Thanks to the original author: Scobalula & dtzxporter  
+## Thanks to the original author: [Scobalula](https://github.com/Scobalula) & [dtzxporter](https://github.com/dtzxporter)  
 
 # What's new
 * A switch to change the unit of exported models and animations.  
