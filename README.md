@@ -1,4 +1,5 @@
 # Greyhoundx
+[![Releases](https://img.shields.io/github/downloads/dest1yo/Greyhoundx/total.svg)](https://github.com/Scobalula/Greyhound/releases)  
 A fork of Greyhound modified by me, the Call of Duty Asset Extractor.  
 ## Thanks to the original author: [Scobalula](https://github.com/Scobalula) & [dtzxporter](https://github.com/dtzxporter)  
 
